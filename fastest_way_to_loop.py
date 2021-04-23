@@ -34,7 +34,8 @@ def for_loop_with_increment(n=100_000_000):
 def for_loop_with_test(n=100_000_000):
     s = 0
     for i in range(n):
-        if i < n: pass
+        if i < n:
+            pass
         s += i
     return s
 
@@ -42,7 +43,8 @@ def for_loop_with_test(n=100_000_000):
 def for_loop_with_increment_and_test(n=100_000_000):
     s = 0
     for i in range(n):
-        if i < n: pass
+        if i < n:
+            pass
         i += 1
         s += i
     return s
@@ -82,7 +84,8 @@ def main():
     print('sum generator\t\t', timeit.timeit(sum_generator, number=1))
     print('sum list comp\t\t', timeit.timeit(sum_list_comp, number=1))
     print('numpy sum\t\t', timeit.timeit(sum_numpy, number=1))
-    print('numpy sum python range\t\t', timeit.timeit(sum_numpy_python_range, number=1))
+    print('numpy sum python range\t\t', timeit.timeit(
+        sum_numpy_python_range, number=1))
     print('math sum\t\t', timeit.timeit(sum_math, number=1))
 
 
